@@ -336,7 +336,7 @@ class CoursesPage extends StatelessWidget {
   final UserRole role;
   const CoursesPage({super.key, required this.role});
   @override
-  Widget build(BuildContext context) => ListView(padding: const EdgeInsets.all(18), children: [const Text('المقررات الدراسية', style: TextStyle(fontSize: 23, fontWeight: FontWeight.w800, color: navy)), const SizedBox(height: 7), Text(role == UserRole.student ? 'المقررات المسجل بها هذا الفصل' : 'استعراض المقررات ومتابعة تفاصيلها', style: const TextStyle(color: Color(0xFF718096))), const SizedBox(height: 20), ...courses.map((course) => Padding(padding: const EdgeInsets.only(bottom: 12), child: CourseCard(course: course, onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => CourseDetailsPage(course: course, role: role)))))]);
+  Widget build(BuildContext context) => ListView(padding: const EdgeInsets.all(18), children: [const Text('المقررات الدراسية', style: TextStyle(fontSize: 23, fontWeight: FontWeight.w800, color: navy)), const SizedBox(height: 7), Text(role == UserRole.student ? 'المقررات المسجل بها هذا الفصل' : 'استعراض المقررات ومتابعة تفاصيلها', style: const TextStyle(color: Color(0xFF718096))), const SizedBox(height: 20), ...courses.map((course) => Padding(padding: const EdgeInsets.only(bottom: 12), child: CourseCard(course: course, onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => CourseDetailsPage(course: course, role: role))))))]);
 }
 
 class CourseCard extends StatelessWidget {
